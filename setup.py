@@ -6,10 +6,10 @@ setup(
 
     version='0.2',
 
-    description='Ploto-esmdiag project.',
+    description='A ploto extension for esmdiag.',
     long_description=__doc__,
 
-    packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
+    packages=find_packages(exclude=["tests", "vendor", "docker"]),
 
     include_package_data=True,
 
@@ -22,14 +22,13 @@ setup(
     install_requires=[
         'click',
         'pyyaml',
-        'pika',
         'requests',
-        'sqlalchemy',
         'loguru',
         'celery',
         'netCDF4',
         'elasticsearch==6.3.1',
         'redis',
+        'ploto',
     ],
 
     extras_require={
